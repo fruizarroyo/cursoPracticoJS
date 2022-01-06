@@ -1,0 +1,30 @@
+:root {
+    --font: 'Quicksand', sans-serif;
+}
+
+body {
+    font-family: var(--font);
+
+}
+
+h2 {
+    margin: 0;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    margin: 5%;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+}
+
