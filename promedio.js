@@ -13,4 +13,3 @@ function calculateMean(list) {
     return listMean;
 }
 
-console.log(calculateMean([1,14,151,10000000]));
