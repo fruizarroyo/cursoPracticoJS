@@ -44,7 +44,7 @@ function calculateMedian (list) {
             console.error("La lista de datos debe contener al menos un valor");
         }
 
-}
+};
 
 
 
