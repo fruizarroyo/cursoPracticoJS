@@ -1,0 +1,90 @@
+:root {
+    --text-input-field: #f7f7f7;
+    --sm: 14px;
+    --md: 16px;
+    --lg: 18px;
+    --slg: 25px;
+    --xlg: 50px;
+    --xxlg: 65px;
+}
+
+body {
+    font-family:  'Be Vietnam Pro', sans-serif;
+    margin: 0;
+    height: 100vh;
+}
+
+a, a:visited h2 {
+    text-decoration:none;
+}
+
+.header-main-page {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.header-main-page img {
+    height: 60px;
+    width: 60px;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: 1fr;
+
+}
+
+.card {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+ 
+}
+
+.card h2 {
+    text-transform: uppercase;
+    font-size: var(--xxlg);
+    text-align: center;
+    letter-spacing: 0.2em;
+    color: white;
+    padding: 0 0.3em 0;
+}
+
+.geometric-figures {
+    background-color: rgb(255,136,34,0.7);
+}
+
+.geometric-figures:hover {
+    background-color: rgb(255,136,34);
+    cursor: pointer;
+}
+.discounts {
+    background-color: rgb(84, 140, 255, 0.7);
+}
+.discounts:hover {
+    background-color: rgb(84, 140, 255);
+    cursor: pointer;
+}
+.measures-central-tendency {
+    background-color:rgb(78, 159, 61,0.7);
+}   
+.measures-central-tendency:hover {
+    background-color:rgb(78, 159, 61);
+    cursor: pointer;
+}  
+.wages {
+    background-color: rgb(255, 179, 25, 0.7);
+}
+
+.wages:hover {
+    background-color: rgb(255, 179, 25);
+    cursor: pointer;
+}
+
+@media (max-width: 700px) {
+    .card h2 {
+        font-size: var(--xlg);
+      }
+
+}
