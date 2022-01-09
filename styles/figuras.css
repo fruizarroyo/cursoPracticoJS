@@ -1,30 +1,183 @@
 :root {
-    --font: 'Quicksand', sans-serif;
+    --text-input-field: #f7f7f7;
+    --orange: rgb(255, 171, 118);
+    --sm: 14px;
+    --md: 16px;
+    --lg: 18px;
+    --slg: 25px;
+    --xlg: 50px;
+    --xxlg: 65px;
 }
 
 body {
-    font-family: var(--font);
-
-}
-
-h2 {
+    font-family:  'Be Vietnam Pro', sans-serif;
+    height: 100vh;
     margin: 0;
+    background-image: url("https://wallpaperaccess.com/full/3676274.jpg");
+    background-position: center;
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+  
 }
+
+a, a:visited, p, p:visited {
+    text-decoration:none;
+}
+
+.header-figure-page {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    justify-items: flex-end;
+    background-color: papayawhip;
+    padding: 1%;
+}
+
+.header-figure-page-left {
+    display: flex;
+    align-items: center;
+}
+.header-figure-page-left img {
+    width: 48px;
+    height: 48px;
+}
+.header-figure-page-right {
+    display: flex;
+    align-items: center;
+    
+    
+}
+.header-figure-page-right img {
+    width: 32px;
+    height: 32px;
+    transform: rotate(90deg);
+}
+
+
 
 .card-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
 }
+
+nav {
+    display: flex;
+    float: left;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 10%;
+    background-color: rgba( 255, 255, 255, 0.5 );
+    
+
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10%
+
+}
+
+nav ul li {
+    text-align: center;
+    padding: 20px 0px;
+}
+
+
+nav ul li img {
+    height: 50px;
+    width:50px;
+    cursor: pointer;
+  
+}
+
 
 .card-content {
     display: flex;
-    flex-direction: column;
-    place-items: center;
+    justify-content: space-around;
     margin: 5%;
+    background: rgba( 255, 255, 255, 0.6 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    padding: 5%;
 }
 
 .form-container {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    max-width: 400px;
 }
 
+.form-container label {
+    margin: 12px 0 4px 0;
+   
+}
+
+.form-container input {
+    background-color: var(--text-input-field);
+    border: none;
+    border-radius: 8px;
+    height: 24px;
+    font-size: var(--md);
+    padding: 8px;
+    margin-bottom: 12px;
+
+}
+
+
+.result-container {
+    display: flex;
+    
+}
+.result-container h1 {
+    text-align: center;
+}
+
+.triangle {
+    display: none; /*este display se usan para ocultar y mostrar los divs que corresponden a cada figura*/
+}
+
+.circle {
+    display: none; /*este display se usan para ocultar y mostrar los divs que corresponden a cada figura*/
+}
+
+.square {
+    display: flex; /*este display se usan para ocultar y mostrar los divs que corresponden a cada figura*/
+}
+
+
+.primary-button {
+    background-color: #F47340;
+    border-radius: 8px;
+    border: none;
+    color: papayawhip;
+    width: 100%;
+    cursor: pointer;
+    font-size: var(--lg);
+    font-weight: bold;
+    height: 48px;
+    margin-top: 12px;
+
+}
+
+@media (max-width: 800px) {
+    nav {
+        display: none;
+    }
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    .card-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .result-container {
+        height: 250px;
+    }
+
+}

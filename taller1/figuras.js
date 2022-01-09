@@ -1,3 +1,7 @@
+const triangle = document.getElementById("triangle");
+const square = document.getElementById("square");
+const circle = document.getElementById("circle");
+
 // Código del cuadrado
 function perimetroCuadrado (lado) {
     return lado*4;
@@ -6,6 +10,7 @@ function perimetroCuadrado (lado) {
 function areaCuadrado (lado) {
     return lado*lado;
 } 
+
 
 
 // Código del triángulo
@@ -30,6 +35,7 @@ function alturaTrianguloIsosceles (lado1, lado2, base) {
 }
 
 
+
 // Código del círculo
 
 
@@ -46,6 +52,7 @@ function perimetroCirculo (radio) {
 function areaCirculo (radio) {
     return radio*radio*pi;
 }
+
 
 
 
@@ -99,3 +106,24 @@ function calcularAreaCirculo () {
     const area = areaCirculo(radio);
     alert(area);
 }
+
+
+function showSquare() {
+    square.style.display = 'flex';
+    triangle.style.display= 'none'
+    circle.style.display='none'
+}
+
+function showTriangle () {
+    triangle.style.display = 'flex';
+    square.style.display= 'none'
+    circle.style.display='none'
+}
+
+function showCircle() {
+    circle.style.display = 'flex';
+    square.style.display= 'none'
+    triangle.style.display='none'
+}
+
+
