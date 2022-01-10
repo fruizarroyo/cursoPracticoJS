@@ -11,11 +11,20 @@
     <title>Figuras geométricas | Curso práctico de Javascript</title>
 </head>
 <body>
+    <div class="menu-mobile" id="menu-mobile" onclick="closeOpenMenuMobile()">
+        <ul>
+            <li><img  src="https://cdn-icons-png.flaticon.com/512/5853/5853902.png" alt="square-navbar" onclick="showSquare()"></li>
+            <li><img  src="https://cdn-icons-png.flaticon.com/512/595/595008.png" alt="square-navbar" onclick="showTriangle()"></li>
+            <li><img  src="https://cdn-icons-png.flaticon.com/512/594/594846.png" alt="circle-navbar" onclick="showCircle()"></li>
+        </ul>
+    </div>
+
     <header class="header-figure-page">
         <div class="header-figure-page-left">
             <img  src="https://images.vexels.com/media/users/3/201965/isolated/preview/27f19dc897b1e9a9a96e008bd2e119bb-linda-forma-cuadrada.png" alt="geometric-square-img">
             <img  src="https://images.vexels.com/media/users/3/201968/isolated/preview/e16341d7a764b436a5cffa931ae0515b-linda-forma-de-triangulo.png" alt="geometric-triangle-img">
             <img  src="https://images.vexels.com/media/users/3/201936/isolated/preview/5b55eb9b6c602cbb03021575782db5ca-forma-de-circulo-lindo.png" alt="geometric-circle-img">
+            <img class="menu-navbar" src="https://img.icons8.com/material-outlined/24/000000/menu--v1.png" onclick="closeOpenMenuMobile()"/>
             
             <h1>Figuras geométricas</h1>
         </div>
@@ -29,6 +38,7 @@
         </div>
 
     </header>
+
     <nav>
         <ul>
             <li><img  src="https://cdn-icons-png.flaticon.com/512/5853/5853902.png" alt="square-navbar" onclick="showSquare()"></li>
@@ -52,6 +62,7 @@
         </form>
         <div class="result-container">
             <h1>ÁREA DE RESULTADOS</h1>
+            <p id="result-content-square"> </p>
         </div>
         </div>
 
@@ -85,6 +96,7 @@
 
             <div class="result-container">
                 <h1>ÁREA DE RESULTADOS</h1>
+                <p id="result-content-triangle"> </p>
             </div>
             </div>
 
@@ -102,6 +114,7 @@
         </form>
         <div class="result-container">
             <h1>ÁREA DE RESULTADOS</h1>
+            <p id="result-content-circle"> </p>
         </div>
         </div>
 

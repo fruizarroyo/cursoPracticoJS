@@ -57,18 +57,41 @@ function areaCirculo (radio) {
 
 
 // Aquí interactuamos con el html
+
+
+function closeOpenMenuMobile() {
+    const menuMobile = document.getElementById("menu-mobile");
+    console.log("Así estaba: " +menuMobile.style.display)
+    if (menuMobile.style.display=='' || menuMobile.style.display=='none' ) {
+        menuMobile.style.display='flex';
+    } else {
+        menuMobile.style.display='none';
+    }
+}
+
+function displayResults(result, id, text) {
+    const element = document.getElementById(id);
+    const resultsDisplayed = element.innerHTML
+    if (resultsDisplayed) {    
+        element.innerText= "";
+        element.innerText = text +": " + result; 
+    } else {
+        element.innerText = text +": " + result; 
+    }
+}
+
 function calcularPerimetroCuadrado () {
     const input = document.getElementById("input-cuadrado")
     const value = input.value;
     const perimetro = perimetroCuadrado(value);
-    alert(perimetro);
+    displayResults(perimetro, "result-content-square", "El perímetro del cuadrado es")
 }
 
 function calcularAreaCuadrado () {
     const input = document.getElementById("input-cuadrado")
     const value = input.value;
     const area = areaCuadrado(value);
-    alert(area);
+    displayResults(area, "result-content-square", "El área del cuadrado es")
 }
 
 function calcularPerimetroTriangulo () {
@@ -77,14 +100,14 @@ function calcularPerimetroTriangulo () {
     const base = Number(document.getElementById("input-triangle-base").value);
 
     const perimetro = perimetroTriangulo(sideA, sideB, base);
-    alert(perimetro);
+    displayResults(perimetro, "result-content-triangle", "El perímetro del triángulo es")
 }
 
 function calcularAreaTriangulo () {
     const base = Number(document.getElementById("input-triangle-base").value);
     const height = Number(document.getElementById("input-triangle-height").value);
     const area = areaTriangulo(base, height);
-    alert(area);
+    displayResults(area, "result-content-triangle", "El área del triángulo es")
 }
 
 function calcularAlturaTrianguloIsosceles () {
@@ -92,38 +115,38 @@ function calcularAlturaTrianguloIsosceles () {
     const sideB = Number(document.getElementById("input-triangle-b-side").value);
     const base = Number(document.getElementById("input-triangle-base").value);
     const altura = alturaTrianguloIsosceles(sideA, sideB, base);
-    alert(altura);
+    displayResults(altura, "result-content-triangle", "La altura del triángulo isósceles es")
 }
 
 function calcularPerimetroCirculo () {
     const radio = Number(document.getElementById("input-circle").value);
     const perimetro = perimetroCirculo(radio);
-    alert(perimetro);
+    displayResults(perimetro, "result-content-circle", "El perímetro del círculo es")
 }
 
 function calcularAreaCirculo () {
     const radio = Number(document.getElementById("input-circle").value);
     const area = areaCirculo(radio);
-    alert(area);
+    displayResults(area, "result-content-circle", "El área del círculo es")
 }
 
 
 function showSquare() {
     square.style.display = 'flex';
-    triangle.style.display= 'none'
-    circle.style.display='none'
+    triangle.style.display= 'none';
+    circle.style.display='none';
 }
 
 function showTriangle () {
     triangle.style.display = 'flex';
-    square.style.display= 'none'
-    circle.style.display='none'
+    square.style.display= 'none';
+    circle.style.display='none';
 }
 
 function showCircle() {
     circle.style.display = 'flex';
-    square.style.display= 'none'
-    triangle.style.display='none'
+    square.style.display= 'none';
+    triangle.style.display='none';
 }
 
 
