@@ -1,6 +1,17 @@
 
 const coupons = ["First purchase", "Suscription to newsletter", "Black Friday discount"]
 
+function displayResults(result, id, text) {
+    const element = document.getElementById(id);
+    const resultsDisplayed = element.innerHTML
+    if (resultsDisplayed) {    
+        element.innerText= "";
+        element.innerText = text +": $" + result; 
+    } else {
+        element.innerText = text +": $" + result; 
+    }
+}
+
 function getDiscountPrice (originalPrice, discount) {
     const discountPrice = (originalPrice * (100 - discount))/100;
     return discountPrice;
@@ -42,11 +53,7 @@ function calculatePriceDiscount () {
     }
  
 
-
-    const resultPrice = document.getElementById("result-price");
-    resultPrice.innerText = `El precio con descuento es $${discountPrice}`;
-
-    const resultPriceCoupon = document.getElementById("result-price-coupon");
-
-    resultPriceCoupon.innerText = `El precio con descuento y cupón es $${finalPrice}.`;
+    displayResults(discountPrice, "result-price","El precio con descuento es " );
+    displayResults(finalPrice, "result-price-coupon","El precio con descuento y cupón es" );
+   
 }
