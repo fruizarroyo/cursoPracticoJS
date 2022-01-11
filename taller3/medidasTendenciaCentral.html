@@ -3,11 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;800&family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title> Medidas de tendencia central | Curso práctico de JS</title>
+    <link rel="stylesheet" href="../styles/medidasTendenciaCentral.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Medidas de tendencia central</title>
 </head>
 <body>
-    <h1>Medidas de tendencia central</h1>
-    
+
+    <header class="header-mtc-page">
+        <div class="header-mtc-page-left">
+            <img  src="https://images.vexels.com/media/users/3/149886/isolated/preview/3f54e974f8004de0a70a3c17d32414e8-icono-de-tablero-de-grafico-isometrico.png" alt="statistics-img">
+            
+            <h1>Medidas de tendencia central</h1>
+        </div>
+
+
+        <div class="header-mtc-page-right">
+            <a href="../index.html">
+            <img src="https://img.icons8.com/ios/50/000000/expand-arrow--v1.png"/>  
+            </a>
+            
+        </div>
+    </header>
+
+    <section class="card-container">
+        <div class="card-content">
+        
+            <form class="form-container">
+                <h2>Calcula el promedio, la moda y la mediana de un array de valores</h2>
+                <label for="input-array">Escribe tu array de valores separados con comas:</label>
+                <input id="input-array" type="text", placeholder="1,2,3,4,5,6">
+
+
+                <button type="button"  class="primary-button" onclick="calculateMean()">Calcular promedio</button>
+                <button type="button"  class="primary-button" onclick="calculateMedian()">Calcular mediana</button>
+                <button type="button"  class="primary-button" onclick="calculateMode()">Calcular moda</button>
+        
+        
+            </form>
+
+            <div class="result-container">
+                <h1>ÁREA DE RESULTADOS</h1>
+                <p id="result-parragraph"></p>
+            </div>
+        </div>
+
+    </section>
+    <script src="../taller3/medidasTendenciaCentral.js"></script>
 </body>
 </html>
