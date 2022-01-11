@@ -1,0 +1,157 @@
+:root {
+    --text-input-field: #f7f7f7;
+    --orange: rgb(255, 171, 118);
+    --sm: 14px;
+    --md: 16px;
+    --lg: 18px;
+    --slg: 25px;
+    --xlg: 50px;
+    --xxlg: 65px;
+}
+
+body {
+    font-family:  'Be Vietnam Pro', sans-serif;
+    height: 100vh;
+    margin: 0;
+    background-image: url("https://cdn.wallpapersafari.com/29/56/ymaAeU.jpg");
+    background-position: center;
+    background-size: cover;
+
+  
+}
+
+
+h2 {
+    margin: 0;
+}
+
+
+.header-wage-page {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    justify-items: flex-start;
+    background-color: papayawhip;
+    padding: 1%;
+}
+
+.header-wage-page-left {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+}
+.header-wage-page-left img {
+    width: 100px;
+    height: 100px;
+}
+
+.header-wage-page h1 {
+    padding-left: 2%;
+}
+
+.header-wage-page-right {
+    display: flex;
+    align-items: center;
+    
+    
+}
+.header-wage-page-right img {
+    width: 32px;
+    height: 32px;
+    transform: rotate(90deg);
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+
+    
+}
+
+
+.card-content {
+    display: flex;
+    justify-content: space-around;
+    margin: 5%;
+    background: rgba( 255, 255, 255, 0.6 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    padding: 2% 5%;
+    gap:3%;
+    width: 70%; 
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+}
+
+.form-container label {
+    margin: 12px 0 4px 0;
+   
+}
+
+.form-container input {
+    background-color: var(--text-input-field);
+    border: none;
+    border-radius: 8px;
+    height: 24px;
+    font-size: var(--md);
+    padding: 8px;
+    margin-bottom: 12px;
+
+}
+
+.result-container {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    border:1px solid rgba( 255, 255, 255 );
+    padding:  0 5%;
+    
+}
+.result-container h1 {
+    text-align: center;
+}
+
+.result-container p {
+    font-size: var(--lg);
+    font-weight: 500;
+    
+
+}
+
+.primary-button {
+    background-color: teal;
+    border-radius: 8px;
+    border: none;
+    color: papayawhip;
+    width: 100%;
+    cursor: pointer;
+    font-size: var(--lg);
+    font-weight: bold;
+    height: 48px;
+    margin-top: 12px;
+
+}
+
+@media (max-width: 800px) {
+    .card-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .result-container {
+        margin-top: 20px;
+        width: 80%;
+    }
+
+    .form-container {
+        max-width: 90%;
+    }
+}
