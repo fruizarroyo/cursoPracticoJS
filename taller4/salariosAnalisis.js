@@ -10,17 +10,23 @@ function displayResults(id, text) {
 }
 
 function getInputText () {
-    const basicWage = document.getElementById("input-wage")?document.getElementById("input-wage").value:0;
-    const dayExtraHours =  document.getElementById("input-day-extra-hours")?document.getElementById("input-day-extra-hours").value:0;
-    const sundayExtraHours = document.getElementById("input-sunday-extra-hours")?document.getElementById("input-sunday-extra-hours").value:0;
-    const holidayExtraHours =  document.getElementById("input-holiday-extra-hours")?document.getElementById("input-holiday-extra-hours").value:0;
 
+    let basicWage = document.getElementById("input-wage").value?document.getElementById("input-wage").value:0;
+    let dayExtraHours =  document.getElementById("input-day-extra-hours").value?document.getElementById("input-day-extra-hours").value:0;
+    let sundayExtraHours = document.getElementById("input-sunday-extra-hours").value?document.getElementById("input-sunday-extra-hours").value:0;
+    let holidayExtraHours =  document.getElementById("input-holiday-extra-hours").value?document.getElementById("input-holiday-extra-hours").value:0;
+
+    //Convertir todo a entero
     basicWage = parseInt(basicWage);
     dayExtraHours = parseInt(dayExtraHours);
     sundayExtraHours = parseInt(sundayExtraHours);
     holidayExtraHours = parseInt(holidayExtraHours);
-    console.log(basicWage + dayExtraHours + sundayExtraHours + holidayExtraHours );
-    return basicWage, dayExtraHours, sundayExtraHours, holidayExtraHours
+
+    // console.log(basicWage);
+    // console.log(dayExtraHours);
+    // console.log(sundayExtraHours);
+    // console.log(holidayExtraHours);
+    return {basicWage, dayExtraHours, sundayExtraHours, holidayExtraHours}
 };
 
 function getHourlyWage(wage) {
@@ -40,7 +46,7 @@ function calculateHolidayExtraHoursEarnings (hourlyWage, extraHours) {
 };
 
 function calculateTotalEarnings () {
-    const basicWage, dayExtraHours, sundayExtraHours, holidayExtraHours = getInputText();
+    const {basicWage, dayExtraHours, sundayExtraHours, holidayExtraHours} = getInputText();
     const hourlyWage = getHourlyWage(basicWage);
     const dayExtraHoursEarnings = calculateDayExtraHoursEarnings(hourlyWage, dayExtraHours);
     const sundayExtraHoursEarnings = calculateSundayExtraHoursEarnings(hourlyWage, sundayExtraHours);
